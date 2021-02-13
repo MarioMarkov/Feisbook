@@ -1,0 +1,14 @@
+{
+    "users" :[
+        {
+            "id":1,
+            "name":"MArio"
+        }
+    ],
+    "comments" :[
+        {
+            "userid":1,
+            "body":"Hello im here"
+        }
+    ]
+}
