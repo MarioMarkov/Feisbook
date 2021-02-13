@@ -1,0 +1,18 @@
+p{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.form-control{
+    
+    border: #2851a3 solid;
+    border-radius: 10px;
+}
+.postBtn{
+    background-color: #2851a3;
+}
+.avatar {
+    vertical-align: middle;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
