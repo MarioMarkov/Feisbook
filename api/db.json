@@ -1,14 +1,32 @@
 {
-    "users" :[
-        {
-            "id":1,
-            "name":"MArio"
-        }
-    ],
-    "comments" :[
-        {
-            "userid":1,
-            "body":"Hello im here"
-        }
-    ]
+  "posts": [
+    {
+      "id": 1,
+      "author": "Mario Markov",
+      "body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis at suscipit, facilis rem dolorum doloremque exercitationem, accusamus voluptate, minus enim ullam similique repudiandae provident commodi sed dolore deleniti eum reprehenderit?",
+      "likes": 0,
+      "dislikes": 0
+    },
+    {
+      "author": "",
+      "body": "",
+      "likes": 0,
+      "dislikes": 0,
+      "id": 2
+    },
+    {
+      "author": "",
+      "body": "",
+      "likes": 0,
+      "dislikes": 0,
+      "id": 3
+    },
+    {
+      "author": "",
+      "body": "",
+      "likes": 0,
+      "dislikes": 0,
+      "id": 4
+    }
+  ]
 }

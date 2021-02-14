@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/litera/bootstrap.min.css">
   <link rel="stylesheet" href="./css/style.css">
   <title>My JavaScript App</title>
@@ -17,7 +17,7 @@
         <a href="#" style="background-color: #2851a3;" class="navbar-brand p-2 ml-3 rounded font-weight-bold"><p style="color: white;" class="h3  mb-0">Feisbook</p></a>
       </div>
     </nav>
-  <div class="container ">
+  <div class="container inputContainer">
     <p class="h3 ">Hello dear: <span id="greeting"></span></p>
   </div>
   <div class="container mb-3 border py-4 rounded">
@@ -28,7 +28,7 @@
       </div>
       <div class="col-8">
         <label for="userName" class="form-label">Your Name:</label>
-        <input type="text"  class="form-control" id="userName" placeholder="Insert Name...">
+        <input type="text"  class="form-control" id="userNameInput" placeholder="Insert Name...">
       </div>
     </div>
     <!-- First row div -->
@@ -39,32 +39,15 @@
       </div>
       <div class="col-8">
         <label for="body" class="form-label">Your Status:</label>
-        <textarea  class="form-control" id="body" rows="2" placeholder="Insert status..."></textarea>
+        <textarea  class="form-control" id="bodyInput" rows="2" placeholder="Insert status..."></textarea>
       </div>
     </div>
-    <button class="btn btn-primary btn-block postBtn">Post It</button>
+    <input type="hidden" id="id" value="">
+    <button class="btn btn-primary btn-block postBtn "><span class="h4 ">Post It</span></button>
   </div><!-- container -->
   
   <div class="container p-0" id="posts">
-    <div class="card text-white bg-primary mb-3">
-      <div class="card-header d-flex align-items-center"> 
-        <div class="header mr-auto">
-          <div class="header-main d-flex">
-            <img src="https://png.pngtree.com/png-vector/20190223/ourmid/pngtree-vector-avatar-icon-png-image_695765.jpg" alt="Avatar" class="avatar"> <span class="userName h4 mb-0 ml-4 align-self-center ">Mario Markov</span>
-          </div>
-          
-        </div>
-        <div class="badges">
-          <span  class="badge badge-pill badge-success p-2"><h5 class="p-1 m-0">Likes: 24</h5> </span>
-          <span class="badge badge-pill badge-danger"><h5 class="p-1 m-0">Dislikes: 24</h5></span>
-        </div>
-      </div>
-      <div class="card-body">
-        <div id="post">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis at suscipit, facilis rem dolorum doloremque exercitationem, accusamus voluptate, minus enim ullam similique repudiandae provident commodi sed dolore deleniti eum reprehenderit?
-        </div>
-      </div>
-    </div>
+    
   </div>
 
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

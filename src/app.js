@@ -1,6 +1,8 @@
 import { http } from './http'
-
-document.querySelector('#userName').addEventListener('keyup',updateGreeting)
+import { ui } from './UI'
+document.querySelector('#userNameInput').addEventListener('keyup',updateGreeting)
+document.querySelector('.postBtn').addEventListener('click',submitPost);
+document.addEventListener('DOMContentLoaded',displayPosts)
 
 function updateGreeting(e){
 
@@ -8,4 +10,28 @@ function updateGreeting(e){
   greeting.textContent = e.target.value
 
   e.preventDefault();
+}
+
+function displayPosts(){
+   http.get('http://localhost:3000/posts')
+   .then(posts=> ui.displayPosts(posts));
+}
+
+function submitPost(e){
+   const data = ui.getInputData();
+  
+   if(data.author !== '' || data.body !==''){
+      http.post('http://localhost:3000/posts',data)
+    .then(()=>{
+      displayPosts();
+      ui.clearFields();
+    });
+   }
+   else{
+     ui.showAlert('Please fill fields','alert alert-danger');
+   }
+    
+  
+  e.preventDefault();
+
 }
