@@ -1,16 +1,16 @@
 import { http } from './http'
 import { ui } from './UI'
-document.querySelector('#userNameInput').addEventListener('keyup',updateGreeting)
+
 document.querySelector('.postBtn').addEventListener('click',submitPost);
 document.addEventListener('DOMContentLoaded',displayPosts)
 
-function updateGreeting(e){
 
-  const greeting = document.querySelector('#greeting');
-  greeting.textContent = e.target.value
+$('#userNameInput').on('keyup',(e)=>{
+  var greeting = $('#greeting');
+  greeting.text(e.target.value);
 
-  e.preventDefault();
-}
+})
+
 
 function displayPosts(){
    http.get('http://localhost:3000/posts')
@@ -26,9 +26,10 @@ function submitPost(e){
       displayPosts();
       ui.clearFields();
     });
+    ui.showAlert('Posted successfully','alert alert-success');
    }
    else{
-     ui.showAlert('Please fill fields','alert alert-danger');
+    ui.showAlert('Please fill fields','alert alert-danger');
    }
     
   

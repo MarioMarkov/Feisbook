@@ -23,11 +23,15 @@ class UI{
                 <span class="badge badge-pill badge-danger"><h5 class="p-1 m-0">Dislikes: ${post.dislikes}</h5></span>
               </div>
             </div>
-            <div class="card-body ">
-              <div id="post">
+            <div class="card-body">
+              <div id="post" class="mb-3">
                ${post.body}
               </div>
-              <div  id="likeSection">
+              <div  id="likeSection" >
+                <div class="float-left">
+                  <a style="color: red;" href=""><i class="fas fa-trash fa-2x"></i> </a>
+                  <a href=""n style="color: rgb(84, 240, 84);"><i class="fas fa-user-edit fa-2x"></i> </a>
+                </div>
                 <div class="float-right">
                   <a style="color: rgb(84, 240, 84);" href=""><i class="fas fa-thumbs-up fa-2x"></i> </a>
                   <a href=""n style="color: red;"><i class="fas fa-thumbs-down fa-2x"></i> </a>
@@ -37,7 +41,7 @@ class UI{
           </div>`
         });
 
-
+        
         this.postsContainer.innerHTML = output;
     }
 
@@ -54,25 +58,22 @@ class UI{
         const alertDiv = document.createElement('div');
     
         alertDiv.className =  className;
-        //alertDiv.getAttribute
-
-        alertDiv.appendChild(document.createTextNode(text));
-
-
-        document.querySelector('card').insertBefore(alertDiv,this.postsContainer)
-
-        // setTimeout(()=>{
-        // this.clearAlert();
-        // },2500)
         
-    }
-    clearAlert(){
-        const currentAlert = document.querySelector('.alert');
+        alertDiv.appendChild(document.createTextNode(text));
+        
+        $(alertDiv).insertBefore('#posts');
 
-        if(currentAlert){
-            currentAlert.remove();
-        }
+        setTimeout(()=>{
+        this.clearAlert();
+        },4000)
     }
+     clearAlert(){
+         const currentAlert = document.querySelector('.alert');
+
+         if(currentAlert){
+             currentAlert.remove();
+         }
+     }
 
      clearFields(){
         this.authorInput.value = '';
