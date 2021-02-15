@@ -3,7 +3,7 @@ import { ui } from './UI'
 
 document.querySelector('.postBtn').addEventListener('click',submitPost);
 document.addEventListener('DOMContentLoaded',displayPosts)
-
+document.querySelector('#posts').addEventListener('click',deletePost);
 
 $('#userNameInput').on('keyup',(e)=>{
   var greeting = $('#greeting');
@@ -35,4 +35,14 @@ function submitPost(e){
   
   e.preventDefault();
 
+}
+
+function deletePost(e){
+  e.preventDefault();
+ if(e.target.parentElement.classList.contains('deleteBtn')){
+   const id = e.target.parentElement.getAttribute('data-id');
+    
+   http.delete(`http://localhost:3000/posts/${id}`)
+   .then(()=>{displayPosts()});
+ }
 }

@@ -10,7 +10,7 @@ class UI{
         let output = '';
 
         posts.forEach(post => {
-            output += `<div class="card text-white bg-primary mb-3">
+            output += `<div class="card text-white bg-primary mb-3 mainCard">
             <div class="card-header d-flex align-items-center"> 
               <div class="header mr-auto">
                 <div class="header-main d-flex">
@@ -29,12 +29,12 @@ class UI{
               </div>
               <div  id="likeSection" >
                 <div class="float-left">
-                  <a style="color: red;" href=""><i class="fas fa-trash fa-2x"></i> </a>
-                  <a href=""n style="color: rgb(84, 240, 84);"><i class="fas fa-user-edit fa-2x"></i> </a>
+                  <a style="color: red;" class="deleteBtn" data-id="${post.id}" href=""><i class="fas fa-trash fa-2x"></i> </a>
+                  <a href=""n style="color: rgb(84, 240, 84);" data-id="${post.id}"><i class="fas fa-user-edit fa-2x"></i> </a>
                 </div>
                 <div class="float-right">
-                  <a style="color: rgb(84, 240, 84);" href=""><i class="fas fa-thumbs-up fa-2x"></i> </a>
-                  <a href=""n style="color: red;"><i class="fas fa-thumbs-down fa-2x"></i> </a>
+                  <a style="color: rgb(84, 240, 84);" data-id="${post.id}" href=""><i class="fas fa-thumbs-up fa-2x"></i> </a>
+                  <a href=""n style="color: red;" data-id="${post.id}"><i class="fas fa-thumbs-down fa-2x"></i> </a>
                 </div>
               </div>
             </div>
