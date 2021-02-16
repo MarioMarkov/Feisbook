@@ -2,10 +2,17 @@
   "posts": [
     {
       "author": "Mario Markov",
-      "body": "  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus fugit deleniti animi impedit facere porro sed vero, omnis aliquam dolor laboriosam, quod perspiciatis perferendis, quas autem. Dolorem, asperiores temporibus dolores id tenetur quasi illo facere eos velit. Quae laudantium consequatur nam ex voluptates similique, quasi, mollitia, excepturi consectetur voluptas hic.",
+      "body": "adkaskdnaskndaksjdn as d d ada da d adlas da d ad dasd",
       "likes": 0,
       "dislikes": 0,
       "id": 1
+    },
+    {
+      "author": "Mario",
+      "body": "hahhaahha",
+      "likes": 0,
+      "dislikes": 0,
+      "id": 2
     }
   ]
 }

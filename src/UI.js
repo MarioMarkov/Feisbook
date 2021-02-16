@@ -3,7 +3,9 @@ class UI{
         this.authorInput = document.querySelector('#userNameInput');
         this.bodyInput = document.querySelector("#bodyInput")
         this.id = document.querySelector('#id');
-        this.postsContainer = document.querySelector('#posts')
+        this.postsContainer = document.querySelector('#posts');
+        this.postBtn = document.querySelector('.postBtn');
+        this.formState = 'add';
     }
 
     displayPosts(posts){
@@ -30,7 +32,7 @@ class UI{
               <div  id="likeSection" >
                 <div class="float-left">
                   <a style="color: red;" class="deleteBtn" data-id="${post.id}" href=""><i class="fas fa-trash fa-2x"></i> </a>
-                  <a href=""n style="color: rgb(84, 240, 84);" data-id="${post.id}"><i class="fas fa-user-edit fa-2x"></i> </a>
+                  <a href=""  class="updateBtn" style="color: rgb(84, 240, 84);" data-id="${post.id}"><i class="fas fa-user-edit fa-2x"></i> </a>
                 </div>
                 <div class="float-right">
                   <a style="color: rgb(84, 240, 84);" data-id="${post.id}" href=""><i class="fas fa-thumbs-up fa-2x"></i> </a>
@@ -53,7 +55,51 @@ class UI{
             dislikes:0
         } 
     }
-    
+
+    fillForm(post){
+      this.authorInput.value = post.author;
+      this.bodyInput.value = post.body;
+      //here settting the id
+      this.id.value = post.id;
+
+      this.changeFormState('edit');
+       
+    }
+    clearIdInput(){
+      this.id.value = '';
+    }
+    changeFormState(type){
+      if(type ==='edit'){
+          document.querySelector('.greeting').style.display ='none'; 
+          document.querySelector('.question1').textContent = "Author:";
+          document.querySelector('.question2').textContent = "Status:";
+
+          this.postBtn.textContent = 'Update Post';
+          this.postBtn.classList = 'post-submit btn btn-warning btn-block'
+          const cancelBtn = document.createElement('btn');
+          cancelBtn.className = 'post-cancel btn btn-light btn-block';
+          cancelBtn.appendChild(document.createTextNode('Cancel Edit'));
+
+          const form = this.postBtn.parentElement;
+            const end = document.querySelector('.form-end')
+
+            form.insertBefore(cancelBtn,end);
+          
+
+      }else{
+          document.querySelector('.greeting').style.display ='block'; 
+          this.postBtn.textContent = 'Post It';
+          this.postBtn.classList = 'post-submit btn btn-primary btn-block';
+          if(document.querySelector('.post-cancel')){
+              document.querySelector('.post-cancel').remove();
+          }
+          //clear id from hidden field
+          this.clearIdInput();
+
+          this.clearFields();
+      }
+
+  }
     showAlert(text,className){
         const alertDiv = document.createElement('div');
     
