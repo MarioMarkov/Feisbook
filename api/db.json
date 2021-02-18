@@ -13,6 +13,21 @@
       "likes": 0,
       "dislikes": 0,
       "id": 2
+    },
+    {
+      "author": "Mario",
+      "body": "hahhaahha",
+      "likes": 0,
+      "dislikes": 0,
+      "id": 2
+    }
+    ,
+    {
+      "author": "Mario",
+      "body": "hahhaahha",
+      "likes": 0,
+      "dislikes": 0,
+      "id": 2
     }
   ]
 }
