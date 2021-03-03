@@ -3,10 +3,14 @@ class UI{
         this.authorInput = document.querySelector('#userNameInput');
         this.bodyInput = document.querySelector("#bodyInput")
         this.id = document.querySelector('#id');
+        
+
         this.postsContainer = document.querySelector('#posts');
         this.postBtn = document.querySelector('.postBtn');
         this.formState = 'add';
     }
+
+    
 
     displayPosts(posts){
         let output = '';
@@ -21,8 +25,8 @@ class UI{
                 
               </div>
               <div class="badges">
-                <span  class="badge badge-pill badge-success p-2"><h5 class="p-1 m-0">Likes: ${post.likes}</h5> </span>
-                <span class="badge badge-pill badge-danger"><h5 class="p-1 m-0">Dislikes: ${post.dislikes}</h5></span>
+                <span  class="badge badge-pill badge-success p-2"><h5 class="p-1 m-0">Likes: <span class"likesElement">${post.likes}</span></h5> </span>
+                <span class="badge badge-pill badge-danger"><h5 class="p-1 m-0">Dislikes: <span class"dislikesElement">${post.dislikes}</span></h5></span>
               </div>
             </div>
             <div class="card-body">
@@ -35,8 +39,8 @@ class UI{
                   <a href=""  class="updateBtn" style="color: rgb(84, 240, 84);" data-id="${post.id}"><i class="fas fa-user-edit fa-2x"></i> </a>
                 </div>
                 <div class="float-right">
-                  <a style="color: rgb(84, 240, 84);" data-id="${post.id}" href=""><i class="fas fa-thumbs-up fa-2x"></i> </a>
-                  <a href=""n style="color: red;" data-id="${post.id}"><i class="fas fa-thumbs-down fa-2x"></i> </a>
+                  <a style="color: rgb(84, 240, 84);" class="likeBtn" data-id="${post.id}" href=""><i class="fas fa-thumbs-up fa-2x"></i> </a>
+                  <a href="" class="dislikeBtn" style="color: red;" data-id="${post.id}"><i class="fas fa-thumbs-down fa-2x"></i> </a>
                 </div>
               </div>
             </div>

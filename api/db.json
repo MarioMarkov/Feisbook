@@ -2,31 +2,16 @@
   "posts": [
     {
       "author": "Mario Markov",
-      "body": "adkaskdnaskndaksjdn as d d ada da d adlas da d ad dasd",
-      "likes": 0,
-      "dislikes": 0,
+      "body": "i am a sofware dev AT TELERIK",
+      "likes": 9,
+      "dislikes": 4,
       "id": 1
     },
     {
-      "author": "Mario",
-      "body": "hahhaahha",
-      "likes": 0,
-      "dislikes": 0,
-      "id": 2
-    },
-    {
-      "author": "Mario",
-      "body": "hahhaahha",
-      "likes": 0,
-      "dislikes": 0,
-      "id": 2
-    }
-    ,
-    {
-      "author": "Mario",
-      "body": "hahhaahha",
-      "likes": 0,
-      "dislikes": 0,
+      "author": "Kalina Vuleva",
+      "body": "i am a doctor",
+      "likes": 6,
+      "dislikes": 5,
       "id": 2
     }
   ]
