@@ -2,17 +2,17 @@
   "posts": [
     {
       "author": "Mario Markov",
-      "body": "i am a sofware dev AT TELERIK",
-      "likes": 9,
-      "dislikes": 4,
+      "body": "i am a sofware dev AT SoftUni",
+      "likes": 11,
+      "dislikes": 10,
       "id": 1
     },
     {
-      "author": "Kalina Vuleva",
-      "body": "i am a doctor",
-      "likes": 6,
-      "dislikes": 5,
-      "id": 2
+      "author": "Georgi Georgiev",
+      "body": "I am very happy",
+      "likes": 0,
+      "dislikes": 0,
+      "id": 3
     }
   ]
 }
